@@ -4,6 +4,14 @@ public class UserDto {
     String name;
     String password;
 
+    public UserDto() {
+    }
+
+    public UserDto(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
+
     public String getName() {
         return name;
     }

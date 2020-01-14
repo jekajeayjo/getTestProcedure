@@ -20,4 +20,16 @@ public class MainController {
 
         return   userRepository.getPass();
     }
+    @RequestMapping( value = "usere",method = RequestMethod.GET)
+    public Iterable<UserEntity> userEntities()
+    {
+
+        return   userRepository.findAll();
+    }
+    @RequestMapping( value = "userselect",method = RequestMethod.GET)
+    public Iterable<UserDto> userDtoQuery()
+    {
+
+        return   userRepository.getWithoutId();
+    }
 }
